@@ -1,0 +1,110 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+
+{% block body %}
+	
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 28px;
+            color: #4CAF50;
+        }
+
+        .table-container {
+            width: 90%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table thead th {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-size: 15px;
+        }
+
+        table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        table td {
+            padding: 12px;
+            text-align: left;
+            font-size: 14px;
+            color: #555;
+        }
+
+        table td a {
+            color: #2596be;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        table td a:hover {
+            text-decoration: underline;
+        }
+
+        .no-bookings-message {
+            text-align: center;
+            font-size: 18px;
+            color: #777;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 30px auto;
+        }
+    </style>
+<div class="my-bookings-container">
+    <h1>My Bookings</h1>
+
+    {% if bookings %}
+        <ul>
+            {% for booking in bookings %}
+                <li>
+                    <strong>{{ booking.service_type }}</strong> - Needed on {{ booking.service_date }}
+                    <br>
+                    Location: {{ booking.location }}
+                    <br>
+                    Budget: ${{ booking.budget }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>You have not made any bookings yet.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

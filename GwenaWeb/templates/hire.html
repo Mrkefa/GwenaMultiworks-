@@ -1,0 +1,56 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+	
+ <div class="hire-form-container">
+    <h1>Hire an Asset</h1>
+
+    {% if success_message %}
+        <!-- Success Message Section -->
+        <div style="color: green; font-weight: bold;">
+            {{ success_message }}
+        </div>
+        <a href="{% url 'my_account' %}" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: blue; color: white; text-decoration: none; border-radius: 5px;">
+            View My Order
+        </a>
+    {% else %}
+        <!-- Hire Form Section -->
+        <form method="POST">
+            {% csrf_token %}
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Enter your address" required><br>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" placeholder="Enter your location" required><br>
+
+            <label for="company_name">Company Name (if applicable):</label>
+            <input type="text" id="company_name" name="company_name" placeholder="Enter your company name"><br>
+
+            <label for="contact_info">Contact Information:</label>
+            <input type="text" id="contact_info" name="contact_info" placeholder="Enter your phone/email" required><br>
+
+            <label for="service_date">Date Asset is Needed:</label>
+            <input type="date" id="service_date" name="service_date" required><br>
+
+            <label for="service_type">Type of Asset:</label>
+            <select id="service_type" name="service_type">
+                <option value="lorry">Lorry</option>
+                <option value="pick-up">Pick-Up</option>
+                <option value="grader">Grader</option>
+                <option value="excavator">Excavator</option>
+            </select><br>
+
+            <label for="budget">Budget:</label>
+            <input type="text" id="budget" name="budget" placeholder="Enter your budget" required><br>
+
+            <button type="submit" style="margin-top: 10px;">Submit</button>
+        </form>
+    {% endif %}
+</div>
+
+{% endblock %}

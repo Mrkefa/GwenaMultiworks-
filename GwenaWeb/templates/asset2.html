@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Gwena Multiworks</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: UpConstruction
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="project-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Gwena Multiworks</h1> <span>.</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'services' %}">Services</a></li>
+          <li><a href="{% url 'projects' %}">Projects</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+  
+    <!-- Page Title -->
+    <div class="page-title dark-background" style="background-image: url({% static 'assets/img/page-title-bg.jpg' %});">
+      <div class="container position-relative">
+        <h1>Company Assets</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Project Details</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Project Details Section -->
+    <section id="project-details" class="project-details section">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="portfolio-details-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+
+            <div class="swiper-slide">
+              <img src="{% static 'assets/comass/lr.jpg' %}" alt="">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="{% static 'assets/comass/lr1.jpg' %}" alt="">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="{% static 'assets/comass/lr2.jpg' %}" alt="">
+            </div>
+
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2> Company Assets </h2>
+              <p>To deliver top-tier services, Gwena Multiworks Limited is equipped with a modern and diverse fleet of machinery. Our assets include state-of-the-art pickups, graders, loaders, excavators, and other specialized equipment necessary for a wide range of projects.</p>
+<p>These assets are the backbone of our operations, allowing us to handle projects of various scales with efficiency and precision. Regular maintenance and upgrades ensure that our equipment is always in optimal working condition, reducing downtime and ensuring timely project completion.</p>
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>"At Gwena Multiworks Limited, our assets are a cornerstone of our success. We have invested in a modern and diverse fleet of machinery, including pickups, graders, loaders, excavators, and more, to ensure that we deliver exceptional results across all our projects. Each piece of equipment is maintained to the highest standards, enabling us to handle complex tasks with precision and efficiency. These assets not only reflect our commitment to excellence but also empower us to consistently meet and exceed the expectations of our clients."</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <div>
+                  <img src="{% static '' %}assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                  <h3>Erick Ochieng.</h3>
+                  <h4> Director, Gwena Multiworks Limited</h4>
+                </div>
+              </div>
+
+              <p>
+                Our experienced operators and engineers work hand-in-hand with our machinery, ensuring every piece of equipment is utilized to its fullest potential. This synergy allows us to deliver projects that meet the highest standards of quality and safety.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong> Sponsrd by County Governement of Siaya</li>
+                <li><strong>Client</strong> Gwena Company</li>
+                <li><strong>Project date</strong> 01 March, 2024</li>
+                <li><strong>Project URL</strong> <a href="#">www.example.com</a></li>
+                <li><a href="#" class="btn-visit align-self-start">Visit Website</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Project Details Section -->
+      
+    <h1 class="text-center bg-secondary container">Hire Our Products</h1>
+      <p class="container">Looking to rent reliable machinery? Gwena Multiworks Limited offers pickups, graders, loaders, and more for hire. Get the right tools for your project today!</p>
+      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assets Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input, select, button, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .btn-company-or-individual {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn-company-or-individual button {
+            width: 48%;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border: none;
+            transition: 0.3s;
+            font-size: 15px;
+        }
+
+        .btn-company-or-individual button:hover {
+            background-color: #0056b3;
+        }
+
+        .submit-button {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-button:hover {
+            background-color: #218838;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .success-message {
+            text-align: center;
+            padding: 30px 20px;
+            border: 1px solid #28a745;
+            background-color: #d4edda;
+            color: #155724;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <script>
+        function toggleCompanyFields(option) {
+            const companyNameField = document.getElementById("company-name-field");
+            if (option === "company") {
+                companyNameField.classList.remove("hidden");
+            } else {
+                companyNameField.classList.add("hidden");
+                document.getElementById("company-name").value = ""; // Clear the input if switching back to individual
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Hire Form</h1>
+
+        <!-- Check if a success message is available -->
+        {% if success_message %}
+            <!-- Success Message -->
+            <div class="success-message">
+                <h1>Sent Successfully!</h1>
+                <p>{{ success_message }}</p>
+            </div>
+        {% else %}
+            <!-- Show the Form -->
+            <form id="order-form" action="{% url 'assets' %}" method="POST">
+                {% csrf_token %}
+
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <!-- Address -->
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                </div>
+
+                <!-- Location -->
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" placeholder="Enter your location" required>
+                </div>
+
+                <!-- Individual or Company -->
+                <div class="form-group">
+                    <label>Are you ordering as:</label>
+                    <div class="btn-company-or-individual">
+                        <button type="button" onclick="toggleCompanyFields('individual')">Individual</button>
+                        <button type="button" onclick="toggleCompanyFields('company')">Company</button>
+                    </div>
+                </div>
+
+                <!-- Company Name (Hidden initially) -->
+                <div id="company-name-field" class="form-group hidden">
+                    <label for="company-name">Company Name</label>
+                    <input type="text" id="company-name" name="company_name" placeholder="Enter your company name">
+                </div>
+
+                <!-- Contact Information -->
+                <div class="form-group">
+                    <label for="contact-info">Contact Information</label>
+                    <input type="text" id="contact-info" name="contact_info" placeholder="Enter your phone/email" required>
+                </div>
+
+                <!-- Date Service is Needed -->
+                <div class="form-group">
+                    <label for="service-date">Date Asset is Needed</label>
+                    <input type="date" id="service-date" name="service_date" required>
+                </div>
+
+                <!-- Type of Service -->
+                <div class="form-group">
+                    <label for="service-type">Type of Asset</label>
+                    <select id="service-type" name="service_type" required>
+                        <option value="lorry">Lorry</option>
+                        <option value="pick-up">Pick-Up</option>
+                        <option value="grader">Grader</option>
+                        <option value="excavator">Excavator</option>
+                    </select>
+                </div>
+
+                <!-- Budget -->
+                <div class="form-group">
+                    <label for="budget">Budget</label>
+                    <input type="text" id="budget" name="budget" placeholder="Enter your budget" required>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit" class="submit-button">Submit</button>
+                </div>
+            </form>
+        {% endif %}
+    </div>
+
+</body>
+</html>
+      
+ </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">GwenaMultiworks</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Usenge-Bondo Road</p>
+            <p>P.O BOX 64-40601 BONDO</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254714882701</span></p>
+            <p><strong>Email:</strong> <span>cepomondi@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Company</h4>
+          <ul>
+            <li><a href="#"></a></li>
+            <li><a href="{% url 'about' %}">About us</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'terms' %}">Terms and Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="{% url 'construction' %}">Building and Construction</a></li>
+            <li><a href="{% url 'project' %}">Water Drilling</a></li>
+            <li><a href="{% url 'roads' %}">Road Repair</a></li>
+            <li><a href="{% url 'assets' %}">Material Delivery</a></li>
+            <li><a href="#">Concrete Production</a></li>
+            <li><a href="#">Architecture</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Hire Assets</h4>
+          <ul>
+            <li><a href="{% url 'asset3' %}">Excavator</a></li>
+            <li><a href="{% url 'asset4' %}">Pick-Up</a></li>
+            <li><a href="{% url 'assets' %}">Loader/Dozer</a></li>
+            <li><a href="{% url 'asset2' %}">Lorry</a></li>
+            <li><a href="#">Other construction Machines</a></li>
+          </ul>
+        </div>
+          
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">GwenaMultiwokrs</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
+
+
+	

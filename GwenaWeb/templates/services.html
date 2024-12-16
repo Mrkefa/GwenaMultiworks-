@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Services - UpConstruction Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: UpConstruction
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="services-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Gwena Multiworks</h1> <span>.</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'services' %}" class="active">Services</a></li>
+          <li><a href="{% url 'projects' %}">Projects</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" style="background-image: url({% static 'assets/img/page-title-bg.jpg' %});">
+      <div class="container position-relative">
+        <h1>Services</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Services</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+       <!-- Services Section -->
+    <section id="services" class="services section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>Some of our services incluides;</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-mountain-city"></i>
+              </div>
+              <h3>Building and Construction</h3>
+               <p>At Gwena Multiworks Limited, we specialize in delivering top-quality building services for residential, commercial, and industrial projects. Our expert team ensures that every structure we build is strong, durable, and designed to meet the unique needs of our clients. From the foundation to the finishing touches, we take pride in our craftsmanship and commitment to excellence.</p>
+                <a href="{% url 'construction' %}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+              </div>
+              <h3>Road Repair</h3>
+              <p>Our road repair services are designed to restore the functionality and safety of roadways. Whether it's resurfacing, pothole repair, or full rehabilitation, we use modern techniques and equipment to ensure roads are smooth, durable, and safe for all users. Our team handles every aspect of road maintenance with attention to detail and a focus on longevity.</p>
+                  <a href="{% url 'roads' %}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-compass-drafting"></i>
+              </div>
+              <h3>Water Drilling</h3>
+              <p>We provide professional water drilling services to access reliable, clean water sources for residential, agricultural, and industrial use. Our team uses advanced drilling equipment to reach groundwater and install boreholes, ensuring that the water supply is sustainable and safe. With years of experience, we guarantee efficient and cost-effective water solutions.</p>
+                  <a href="{% url 'project' %}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-trowel-bricks"></i>
+              </div>
+              <h3>Material Delivery</h3>
+              <p>
+Gwena Multiworks Limited offers reliable material delivery services for construction, roadwork, and other projects. Whether you need sand, gravel, cement, or any other construction materials, we ensure prompt delivery to your site. Our logistics team coordinates efficiently to guarantee timely and safe transport, helping keep your project on schedule.
+
+</p>
+                  <a href="{% url 'assets' %}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-helmet-safety"></i>
+              </div>
+              <h3>Concrete Production</h3>
+              <p>
+We provide high-quality concrete production for various construction needs. Whether for foundations, pavements, or building structures, we mix durable concrete to meet the specific requirements of your project. Our state-of-the-art equipment ensures consistent quality, and our expert team ensures precise delivery and application.</p>
+                  <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+              </div>
+              <h3>Architecture</h3>
+              <p>
+At Gwena Multiworks Limited, our architecture services focus on designing functional, aesthetic, and sustainable structures. Our team of experienced architects collaborates with clients to create innovative designs that align with their vision. Whether it’s a residential building or a commercial space, we ensure every design is both creative and practical, with an emphasis on long-term viability.</p>
+               <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assets Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input, select, button, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .btn-company-or-individual {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn-company-or-individual button {
+            width: 48%;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border: none;
+            transition: 0.3s;
+            font-size: 15px;
+        }
+
+        .btn-company-or-individual button:hover {
+            background-color: #0056b3;
+        }
+
+        .submit-button {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-button:hover {
+            background-color: #218838;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .success-message {
+            text-align: center;
+            padding: 30px 20px;
+            border: 1px solid #28a745;
+            background-color: #d4edda;
+            color: #155724;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <script>
+        function toggleCompanyFields(option) {
+            const companyNameField = document.getElementById("company-name-field");
+            if (option === "company") {
+                companyNameField.classList.remove("hidden");
+            } else {
+                companyNameField.classList.add("hidden");
+                document.getElementById("company-name").value = ""; // Clear the input if switching back to individual
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Book Us Today!</h1>
+
+        <!-- Check if a success message is available -->
+        {% if success_message %}
+            <!-- Success Message -->
+            <div class="success-message">
+                <h1>Sent Successfully!</h1>
+                <p>{{ success_message }}</p>
+            </div>
+        {% else %}
+            <!-- Show the Form -->
+            <form id="order-form" action="{% url 'assets' %}" method="POST">
+                {% csrf_token %}
+
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <!-- Address -->
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                </div>
+
+                <!-- Location -->
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" placeholder="Enter your location" required>
+                </div>
+
+                <!-- Individual or Company -->
+                <div class="form-group">
+                    <label>Are you ordering as:</label>
+                    <div class="btn-company-or-individual">
+                        <button type="button" onclick="toggleCompanyFields('individual')">Individual</button>
+                        <button type="button" onclick="toggleCompanyFields('company')">Company</button>
+                    </div>
+                </div>
+
+                <!-- Company Name (Hidden initially) -->
+                <div id="company-name-field" class="form-group hidden">
+                    <label for="company-name">Company Name</label>
+                    <input type="text" id="company-name" name="company_name" placeholder="Enter your company name">
+                </div>
+
+                <!-- Contact Information -->
+                <div class="form-group">
+                    <label for="contact-info">Contact Information</label>
+                    <input type="text" id="contact-info" name="contact_info" placeholder="Enter your phone/email" required>
+                </div>
+
+                <!-- Date Service is Needed -->
+                <div class="form-group">
+                    <label for="service-date">Desired Start Date</label>
+                    <input type="date" id="service-date" name="service_date" required>
+                </div>
+
+                <!-- Type of Service -->
+                <div class="form-group">
+                    <label for="service-type">Type of Service</label>
+                    <select id="service-type" name="service_type" required>
+                        <option value="lorry">Road Opening</option>
+                        <option value="pick-up">Construction and Building</option>
+                        <option value="grader">Renovation</option>
+                        <option value="excavator">Water Services</option>
+                        <option value="excavator">Road Services</option>
+                    </select>
+                </div>
+
+                <!-- Budget -->
+                <div class="form-group">
+                    <label for="budget">Budget</label>
+                    <input type="text" id="budget" name="budget" placeholder="Enter your budget" required>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit" class="submit-button">Submit</button>
+                </div>
+            </form>
+        {% endif %}
+    </div>
+
+</body>
+</html>      
+      
+
+   <!-- Features Section -->
+    <section id="features" class="features section">
+
+      <div class="container">
+
+        <ul class="nav nav-tabs row  g-2 d-flex" data-aos="fade-up" data-aos-delay="100" role="tablist">
+
+          <li class="nav-item col-3" role="presentation">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1" aria-selected="true" role="tab">
+              <h4>Concrete Works</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item col-3" role="presentation">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2" aria-selected="false" tabindex="-1" role="tab">
+              <h4>Construction Works</h4>
+            </a><!-- End tab nav item -->
+
+          </li>
+          <li class="nav-item col-3" role="presentation">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3" aria-selected="false" tabindex="-1" role="tab">
+              <h4>Water Services</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item col-3" role="presentation">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-4" aria-selected="false" tabindex="-1" role="tab">
+              <h4>Road Works</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+        </ul>
+
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="tab-pane fade active show" id="features-tab-1" role="tabpanel">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+                <h3>Concrete Production</h3>
+                <p class="fst-italic">
+                  Our concrete production services ensure high-quality materials for various construction needs. We specialize in:
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span>Fence concrete for durable and secure boundaries.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Bridge concrete for sturdy and long-lasting structures</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Building foundation concrete for stable and reliable construction.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Custom concrete solutions tailored to specific project requirements.</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="{% static 'assets/comass/conc.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End tab content item -->
+
+          <div class="tab-pane fade" id="features-tab-2" role="tabpanel">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+                <h3>Construction</h3>
+                <p class="fst-italic">
+                   
+At Gwena Multiworks Limited, we handle diverse construction projects with precision and expertise, including:
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span>Full-scale construction projects for residential, commercial, and industrial buildings.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Building repairs and renovations to restore or upgrade existing structures.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Roofing and finishing for a complete and polished appearance</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Interior and exterior design services to meet functional and aesthetic needs.</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="{% static 'assets/comass/class1.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End tab content item -->
+
+          <div class="tab-pane fade" id="features-tab-3" role="tabpanel">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+                <h3>Water Drilling</h3>
+                  <p> 
+We provide comprehensive water drilling services to ensure sustainable water access, including:</p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span>Borehole drilling for reliable groundwater access</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Solarization of water pumps for eco-friendly and cost-effective solutions.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Installation of water tanks for storage and efficient distribution.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Irrigation systems to support agricultural activities.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Maintenance and rehabilitation of existing water supply systems.</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="{% static 'assets/comass/water.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End tab content item -->
+
+          <div class="tab-pane fade" id="features-tab-4" role="tabpanel">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+                <h3>Road Projects</h3>
+                <p class="fst-italic">
+                  
+Our road projects focus on building and maintaining safe, efficient transport networks. Services include:
+
+
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span>Grading and paving for new roads or upgrading existing ones.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Construction of bridges to enhance connectivity</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Installation of speed bumps to improve road safety</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="{% static 'assets/comass/coverpage2.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End tab content item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Features Section -->
+  
+  
+ <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>Hear from our satisfied clients who have experienced the exceptional quality, professionalism, and reliability of Gwena Multiworks Limited in transforming their visions into reality.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+                  <h3>James Otieno</h3>
+                  <h4>Commercial Client</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>"Gwena Multiworks Limited transformed our vision into reality with their exceptional building services. The team was professional, efficient, and paid attention to every detail. Our new office building is not only functional but also a masterpiece. We highly recommend their expertise."</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="{% static 'assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Mercy Achieng</h3>
+                  <h4>Community Representative</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>"The road repair project carried out by Gwena Multiworks Limited has made a huge difference in our community. The once impassable road is now smooth and safe, improving access for everyone. Their work was thorough, timely, and of the highest quality."</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
+                  <h3>George Oduor</h3>
+                  <h4> Agricultural Client</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>"Thanks to Gwena Multiworks Limited, our farm now has a reliable water source. The borehole they drilled is efficient, and the team ensured every step of the process was done professionally. This has revolutionized our farming activities, and we are truly grateful."</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="{% static 'assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Faith Nyaboke</h3>
+                  <h4>Construction Manager</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>"Their material delivery services are top-notch! Every order arrived on time and in perfect condition, keeping our construction project on schedule. I appreciate their excellent coordination and reliability."</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="{% static 'assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Kelvin Omondi</h3>
+                  <h4>Site Engineer</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>"The concrete we received from Gwena Multiworks Limited was of superior quality and precisely what we needed for our building project. Their professionalism and commitment to quality are unmatched. I wouldn’t hesitate to work with them again."</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+ </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">GwenaMultiworks</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Usenge-Bondo Road</p>
+            <p>P.O BOX 64-40601 BONDO</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254714882701</span></p>
+            <p><strong>Email:</strong> <span>cepomondi@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Company</h4>
+          <ul>
+            <li><a href="#"></a></li>
+            <li><a href="{% url 'about' %}">About us</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'terms' %}">Terms and Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="{% url 'construction' %}">Building and Construction</a></li>
+            <li><a href="{% url 'project' %}">Water Drilling</a></li>
+            <li><a href="{% url 'roads' %}">Road Repair</a></li>
+            <li><a href="{% url 'assets' %}">Material Delivery</a></li>
+            <li><a href="#">Concrete Production</a></li>
+            <li><a href="#">Architecture</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Hire Assets</h4>
+          <ul>
+            <li><a href="{% url 'asset3' %}">Excavator</a></li>
+            <li><a href="{% url 'asset4' %}">Pick-Up</a></li>
+            <li><a href="{% url 'assets' %}">Loader/Dozer</a></li>
+            <li><a href="{% url 'asset2' %}">Lorry</a></li>
+            <li><a href="#">Other construction Machines</a></li>
+          </ul>
+        </div>
+          
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">GwenaMultiwokrs</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

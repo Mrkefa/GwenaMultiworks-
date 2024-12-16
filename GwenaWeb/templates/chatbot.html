@@ -1,0 +1,209 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with AI Assistant</title>
+    <style>
+        /* Parent container for page content */
+        .body-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Align content to the top */
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 900px; /* Sets a centered width for the page content */
+            background-color: #f4f5f7;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* General styling for body */
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef2f5;
+            color: #333;
+        }
+
+        /* Chat container */
+        #chatContainer {
+            width: 100%;
+            max-width: 600px;
+            background: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px; /* Add spacing from other content */
+        }
+
+        /* Header styles */
+        #chatContainer h3 {
+            margin: 0 0 15px;
+            text-align: center;
+            color: #555555;
+            font-size: 1.5rem;
+        }
+
+        /* Chat message display area */
+        #chatBody {
+            flex-grow: 1; /* Expand to take available space */
+            height: 350px;
+            overflow-y: auto;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #f8f9fa;
+            display: flex;
+            flex-direction: column; /* Arrange messages vertically */
+            gap: 10px; /* Add spacing between messages */
+        }
+
+        /* Chat messages */
+        .message {
+            max-width: 80%; /* Limit message width */
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            word-wrap: break-word; /* Ensure long words break properly */
+            white-space: pre-wrap; /* Preserve line breaks */
+        }
+
+        .message.user {
+            background-color: #007bff;
+            color: white;
+            align-self: flex-end; /* Align user messages to right */
+        }
+
+        .message.bot {
+            background-color: #f1f1f1;
+            color: #333;
+            align-self: flex-start; /* Align bot messages to left */
+        }
+
+        /* Input section */
+        #inputSection {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Input field for typing messages */
+        #userMessage {
+            flex-grow: 1;
+            height: 40px;
+            padding: 8px 10px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        /* Send button styling */
+        #sendButton {
+            height: 40px;
+            padding: 0 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #sendButton:hover {
+            background-color: #218838;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="body-container">
+        <h1>Welcome to the AI Interaction Page</h1>
+        <p>This is the embedded AI chat assistant interface.</p>
+
+        <!-- Chat Interface -->
+        <div id="chatContainer">
+            <h3>Chat with AI Assistant</h3>
+            <div id="chatBody"></div>
+            <div id="inputSection">
+                <input type="text" id="userMessage" placeholder="Type your message here..." autocomplete="off">
+                <button id="sendButton">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const chatBody = document.getElementById("chatBody");
+            const userMessage = document.getElementById("userMessage");
+            const sendButton = document.getElementById("sendButton");
+
+            // Helper function to append messages to the chat body
+            function appendMessage(sender, message) {
+                const messageElement = document.createElement("div");
+                messageElement.className = `message ${sender === "You" ? "user" : "bot"}`;
+                messageElement.textContent = message;
+                chatBody.appendChild(messageElement);
+
+                // Ensure chat body scrolls to show the latest message
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }
+
+            // Event listener for the "Send" button
+            sendButton.addEventListener("click", () => {
+                const message = userMessage.value.trim();
+
+                // Don't process if the input field is empty
+                if (!message) return;
+
+                appendMessage("You", message); // Display the user's message
+                userMessage.value = ""; // Clear the input field
+
+                // Send message to the backend via fetch
+                fetch("/chatbot/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ message }),
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error("Unable to fetch the response from the server.");
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        if (data.response) {
+                            appendMessage("Bot", data.response); // Display Bot's response
+                        } else {
+                            appendMessage("Bot", "Error: No response received from the server.");
+                        }
+                    })
+                    .catch(error => {
+                        appendMessage("Bot", `Error: ${error.message}`);
+                    });
+            });
+
+            // Optional: Allow pressing Enter to send messages
+            userMessage.addEventListener("keypress", (e) => {
+                if (e.key === "Enter") {
+                    sendButton.click();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+{% endblock %}
